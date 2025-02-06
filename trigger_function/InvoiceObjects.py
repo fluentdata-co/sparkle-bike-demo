@@ -41,7 +41,6 @@ class Invoice:
     ReceiptLineReference: Optional[list["ReceiptLineReference"]] = None
     DocumentReference: Optional[list["DocumentReference"]] = None
 
-
 @dataclass
 class Party:
     PartyName: Optional[str] = None

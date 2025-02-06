@@ -5,8 +5,19 @@
 
 import os
 import time
+import json
+import dataclasses
+import decimal
 from InvoiceUtil import read_xml_file, extract_cdata
 from InvoiceParsers import parse_cdata_to_invoices
+
+class EnhancedJSONEncoder(json.JSONEncoder):
+        def default(self, o):
+            if dataclasses.is_dataclass(o):
+                return dataclasses.asdict(o)
+            elif isinstance(o, decimal.Decimal):
+                return str(o)
+            return super().default(o)
 
 def process_folder(folder_path, file_count, invoice_count):
     """
@@ -25,7 +36,7 @@ def process_folder(folder_path, file_count, invoice_count):
 
                 for invoice in invoices:
                     if invoice:
-                        print(invoice)
+                        print(json.dumps(invoice, cls=EnhancedJSONEncoder))
                         print(f"Folder: {folder_path}, File: {filename}, UBLVersionID: {invoice.UBLVersionID}, "
                               f"CustomizationID: {invoice.CustomizationID}, ID: {invoice.ID}, IssueDate: {invoice.IssueDate}, "
                               f"DocumentCurrencyCode: {invoice.DocumentCurrencyCode}")

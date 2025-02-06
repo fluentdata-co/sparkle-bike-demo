@@ -1,0 +1,577 @@
+[
+    {
+        "name": "ReceiptLineReference",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Price",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Item",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "TaxCategory",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "LegalMonetaryTotal",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "LineExtensionAmount",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "TaxExclusiveAmount",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "TaxInclusiveAmount",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "PayableAmount",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "TaxTotal",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "TaxAmount",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "TaxSubtotal",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "DocumentReference",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "PaymentMeans",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "ID",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "PaymentMeansCode",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "PaymentDueDate",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "DeliveryTerms",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "LossRiskResponsibilityCode",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "DeliveryLocation",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "TaxSubtotal",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "AdditionalDocumentReference",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "IssueDate",
+        "type": "DATE",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "IssueTime",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "AccountingCustomerParty",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "PartyName",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "PhysicalLocation",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "ID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CityName",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "PostalZone",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CountrySubentity",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CountrySubentityCode",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "AddressLine",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "Country",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "PartyTaxScheme",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "RegistrationName",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CompanyID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "TaxLevelCode",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "ID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "Name",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "PartyLegalEntity",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "RegistrationName",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CompanyID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CorporateRegistrationScheme",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "Contact",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "Telephone",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "ElectronicMail",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "DocumentCurrencyCode",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "DeliveryParty",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "AccountingSupplierParty",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "PartyName",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "PhysicalLocation",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "ID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CityName",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "PostalZone",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CountrySubentity",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CountrySubentityCode",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "AddressLine",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "Country",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "PartyTaxScheme",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "RegistrationName",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CompanyID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "TaxLevelCode",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "ID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "Name",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "PartyLegalEntity",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "RegistrationName",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CompanyID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CorporateRegistrationScheme",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "Contact",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "Telephone",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "ElectronicMail",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "LineCountNumeric",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "InvoiceTypeCode",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "InvoiceLine",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "ID",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "InvoicedQuantity",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "LineExtensionAmount",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "TaxTotal",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "TaxAmount",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "TaxSubtotal",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "Item",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "Description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "SellersItemIdentification",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "StandardItemIdentification",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "Price",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "PriceAmount",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "BaseQuantity",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "ReceiptLineReference",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "DocumentReference",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "Delivery",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "ActualDeliveryDate",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "DeliveryAddress",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "ID",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CityName",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "PostalZone",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CountrySubentity",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "CountrySubentityCode",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "AddressLine",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "Country",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "DeliveryParty",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "DueDate",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "UUID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "ProfileID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "ID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "CustomizationID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "UBLVersionID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }
+]
