@@ -1,0 +1,7 @@
+<factura>
+    <cliente id="123"/>
+    <items>
+        <item sku="123"/>
+        <item sku="234"/>
+    </items>
+</factura>
